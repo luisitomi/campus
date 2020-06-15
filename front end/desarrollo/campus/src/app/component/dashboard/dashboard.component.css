@@ -1,0 +1,213 @@
+.imgp{
+    width: 100%;
+    padding: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: inherit;
+    margin-top: 30px;
+    height: 500px;
+    position: relative;
+}
+
+.imgpsSomosS2{
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 290px;
+    width: 182px;
+    margin-top: 20px;
+}
+
+.imgpF{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    height: 490px;
+}
+
+.imgpFS{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.imgright{
+    width: 250px;
+    margin-top: 30px;
+    top: 100;
+    height: auto;
+}
+
+.imgpsSomosS22{
+    width: 245px;
+    margin: 0px;
+    margin-left: 40px;
+    padding: 0px;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.imgps{
+    width: auto;
+    margin-top: 1080px;
+    margin-left: -100px;
+}
+
+.imgpsSomos{
+    margin-top: 30px;
+    width: auto;
+    text-align: center;
+    height: 100px;
+}
+
+.imgpsSomosC{
+    width: auto;
+    text-align: center;
+    text-align: justify;
+    margin-top: 100px;
+}
+
+.imgpsSomosG{
+    width: auto;
+    margin-top: unset;
+    left: 0;
+    margin-top: 100px;
+}
+
+.imgpsSomosS1{
+    width: auto;
+    margin-top: unset;
+    display:block;
+    margin:auto;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.imgpsSomosU{
+    width:auto;
+    margin-top: auto;
+    display:block;
+    margin:auto;
+    margin-top: 100px;
+    margin-left:-100px;
+    padding-right: 150px;
+}
+
+.imgpsSomosS21{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.labelsomos{
+    color:  #005699;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: Arial;
+}
+
+.labelcontenido{
+    text-align: center;
+    font-size: 27px;
+    font-family: Arial;
+}
+
+.div1{
+    margin: 0px;
+    padding: 0px;
+    width: 217px; 
+    height: 180px;
+    color: white;
+    margin-left: -10px;
+}
+
+.div2{
+    margin: 0px;
+    padding: 0px;
+    width: 217px; 
+    height: 180px;
+    color: white;
+    margin-left: -10px;
+}
+
+.div3{
+    margin: 0px;
+    padding: 0px;
+    width: 217px; 
+    height: 180px;
+    color: white;
+    margin-left: -10px;
+}
+
+.div4{
+    margin: 0px;
+    padding: 0px;
+    width: 217px; 
+    height: 180px;
+    color: white;
+    margin-left: -10px;
+    padding-right: 1px;
+}
+
+.div5{
+    margin: 0px;
+    padding: 0px;
+    width: 217px; 
+    height: 180px;
+    color: white;
+    margin-left: -10px;
+}
+
+
+.div6{
+    margin: 35px;
+    padding-top: 10px;
+    width: 210px; 
+    height: 0px;
+    color: white;
+}
+
+
+.div11{
+    background: #FC6320;
+    height: 170px;
+}
+
+.div22{
+    background: #005699;
+    height: 170px;
+}
+
+.div33{
+    background: #05AFF9;
+    height: 170px;
+}
+
+.div44{
+    background: #FC6320;
+    height: 170px;
+}
+
+.div55{
+    background: #005699;
+    height: 170px;
+}
+
+.imgpsSomosF{
+    width: auto;
+    margin-top: 100px;
+    margin-right: 0px;
+}
+
+.imgpsSomosF2{
+    margin-top: 100px;
+}
+
+
+.div8{
+    margin: 15px;
+}

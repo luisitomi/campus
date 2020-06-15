@@ -1,0 +1,66 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form *ngIf="registerEventsForm" [formGroup]="registerEventsForm" autocomplete="offs" class="form-register-section">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="tableId">Duración</label>
+          <input type="number" class="form-control form-control-lg" id="tableId" maxlength="30"
+                 formControlName="tableId" [ngClass]="{ 'is-invalid': submitted && f.tableId.errors }" required/>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="description">Participantes</label>
+          <input type="number" class="form-control form-control-lg" id="description" maxlength="30"
+                 formControlName="description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" required/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="list">Tabla</label>
+          <select class="form-control form-control-lg" id="list"
+                  formControlName="list" [ngClass]="{ 'is-invalid': submitted && f.list.errors }" required>
+            <option *ngFor="let the of EventsComi" [value]="the.id">
+              <p>{{the.name}}</p>
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <button class="btn btn-success" style="margin-top: 20px;">Agregar
+
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <table class="table table-hover table-striped table-shadow">
+        <thead>
+            <tr class="t-head-style">
+                <th class="text-center" scope="col">Comisario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container>
+                <tr>
+                    <td class="align-middle text-center">Comisario 2
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn button-cancel ml-auto" (click)="bsModalRef.hide()">CANCELAR</button>
+  <button type="button" class="btn button-add mr-auto" (click)="register()">GUARDAR</button>
+</div>

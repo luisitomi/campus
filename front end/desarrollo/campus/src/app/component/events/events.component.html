@@ -1,0 +1,79 @@
+<div class="container-fluid p-0" style="margin-top: 100px;">
+    <section class="section-route">
+        <div class="container-fluid">
+            <p>Inicio <span class="color-span">></span> Mantenimiento <span class="color-span">></span> <span
+                class="span-route"> Eventos</span></p>
+        </div>
+    </section>
+
+    <section class="container-title">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-sm-10 p-0 title-section">
+                  <div class="text-title">
+                    Eventos
+                  </div>
+                </div>
+                <div class="col-sm-2 p-0 add-section" (click)="openInsertLocalModal()">
+                    <div class="text-add text-center d-none d-md-block">
+                        Añadir +
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="company-table mt-5">
+        <div class="col-sm-5">
+                <div class="row">
+                    <label class="label-search-cinema" for="search" style="font-size: 16px;">Comisario</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg"
+                            [(ngModel)]="busqueda" id="search"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn button-search btn-lg"
+                            (click)="search()">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="table-responsive table-border">
+                <table class="table table-hover table-striped table-shadow">
+                    <caption>Total: {{ events.length }}</caption>
+                    <thead>
+                        <tr class="t-head-style">
+                            <th class="text-center" scope="col">#</th>
+                            <th class="text-center" scope="col">Duración</th>
+                            <th class="text-center" scope="col">Participantes</th>
+                            <th class="text-center" scope="col">Comisario</th>
+                            <th class="text-center" scope="col">Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let item of events | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                            <ng-container *ngFor="let itemsub of item.commissars ;let i = index">
+                                <tr>
+                                    <td class="align-middle text-center">{{item.eventId}}</td>
+                                    <td class="align-middle text-center">{{item.duration}}</td>
+                                    <td class="align-middle text-center">{{item.participants}}</td>
+                                    <td class="align-middle text-center">{{itemsub.name}}</td>
+                                    <td class="align-middle text-center">{{itemsub.typeId}}</td>
+                                </tr>
+                            </ng-container>
+                        </ng-container>
+                    </tbody>
+                </table>
+                <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" autoHide="true" responsive="true"
+                    previousLabel="Anterior" nextLabel="Siguiente">
+                </pagination-controls>
+            </div>
+        </div>
+    </section>
+</div>

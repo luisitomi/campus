@@ -1,0 +1,85 @@
+<div class="container-fluid p-0" style="margin-top: 100px;">
+    <section class="section-route">
+        <div class="container-fluid">
+            <p>Inicio <span class="color-span">></span> Mantenimiento <span class="color-span">></span> <span
+                class="span-route"> MultiTabla</span></p>
+        </div>
+    </section>
+
+    <section class="container-title">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-sm-10 p-0 title-section">
+                  <div class="text-title">
+                    MultiTabla
+                  </div>
+                </div>
+                <div class="col-sm-2 p-0 add-section" (click)="openInsertLocalModal()">
+                    <div class="text-add text-center d-none d-md-block">
+                        Añadir +
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="company-table mt-5">
+        <div class="col-sm-5">
+                <div class="row">
+                    <label class="label-search-cinema" for="search" style="font-size: 16px;">Descripción</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg"
+                            [(ngModel)]="busqueda" id="search"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn button-search btn-lg"
+                            (click)="search()">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="table-responsive table-border">
+                <table class="table table-hover table-striped table-shadow">
+                    <caption>Total: {{ multitable.length }}</caption>
+                    <thead>
+                        <tr class="t-head-style">
+                            <th class="text-center" scope="col">Tabla</th>
+                            <th class="text-center" scope="col">Descripción</th>
+                            <th class="text-center" scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let item of multitable | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                            <tr>
+                                <td class="align-middle text-center">{{item.description}}</td>
+                                <td class="align-middle text-center">{{item.second}}</td>
+                                <td class="align-middle text-center">
+                                    <button id="{{item.itemId}}" type="button" class="btn btn-company-edit"
+                                    (click)="openUpdateLocalModal(item.itemId)">
+                                        <fa-icon [icon]="faEdit"
+                                            [styles]="{'stroke': 'red', 'color': '#1A63AF'}" size="2x">
+                                        </fa-icon>
+                                    </button>
+                                    <button id="{{item.itemId}}" type="button" class="btn btn-view"
+                                        (click)="deleteData(item.itemId)">
+                                        <fa-icon [icon]="faTrash" [styles]="{'stroke': 'red', 'color': '#1A63AF'}"
+                                            size="2x"></fa-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+                <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" autoHide="true" responsive="true"
+                    previousLabel="Anterior" nextLabel="Siguiente">
+                </pagination-controls>
+            </div>
+        </div>
+    </section>
+</div>

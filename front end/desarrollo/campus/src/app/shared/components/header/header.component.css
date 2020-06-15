@@ -1,0 +1,40 @@
+
+nav.navbar ul.nav li {
+    font-family: "Arial";
+    font-size: 30px;
+}
+ 
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+
+/* cambiar el color de fondo a la barra */
+nav.navbar {
+    background-color: #CC1414;
+}
+
+li {
+    border-right: 1px solid #CCCCCC;
+}
+li:last-child {
+    border:none;
+}
+
+.navbar-nav > .active > a {
+    color: #005699; 
+}
+
+a{
+    color: #FF6510;
+}
+
+.vertical-menu {
+    width: 1300px;
+    margin-left: -50px;
+  }
