@@ -1,0 +1,5 @@
+una opcion seria mostrar mayor información al usuario acerca de las actividades que tendrá.
+
+mayor información de las secciones establecidas.
+
+información de notificaciones para el usuario.
